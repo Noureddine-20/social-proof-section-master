@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    Font-size: 15px;
+    font-family: "League Spartan";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-image: url(../img/bg-pattern-top-desktop.svg), url(../img/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0% -20%, 100% -100%;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1000px;
+}
+main .text {
+    width: 400px;
+    padding: 20px;
+}
+main .text h1 {
+    padding: 0 100px 0 0;
+    color: hsl(300, 43%, 22%);
+}
+main .text p {
+    color: hsl(303, 10%, 53%);
+    line-height: 1.2;
+}
+main .rats {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: wrap column;
+}
+main .rats .rat {
+    display: flex;
+    align-items: center;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 5px;
+    width: 90%
+}
+main .rats .rat .stars {
+    margin: 0 20px;
+}
+main .rats .second {
+    transform: translateX(40px);
+}
+main .rats .third {
+    transform: translateX(80px);
+}
+main .rats .rat p {
+    color:hsl(300, 43%, 22%);
+    font-weight: bold;
+}
+main .feedbacks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+main .feedbacks .feedback {
+    background-color: hsl(300, 43%, 22%);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+main .feedbacks .feedback .avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+main .feedbacks .center {
+    transform: translateY(40px)
+}
+main .feedbacks .bottom {
+    transform: translateY(80px)
+}
+main .feedbacks .feedback .avatar img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+main .feedbacks .feedback .header h2 {
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 5px;
+}
+main .feedbacks .feedback .header h3 {
+    margin-top: 0;
+    font-weight: normal;
+    color:hsl(303, 10%, 53%);
+}
+main .feedbacks .feedback p {
+    color:hsl(0, 0%, 100%);
+    line-height: 1.2;
+}
+@media (max-width: 766px) {
+    body {
+        background-image: url(../img/bg-pattern-top-mobile.svg), url(../img/bg-pattern-bottom-mobile.svg);
+        background-position: 90% 0%, 100% 100%;
+        height: unset;
+    }
+    main {
+        margin: 50px;
+        width: 300px;
+    }
+    main .text {
+        text-align: center;
+    }
+    main .text h1 {
+        padding: 25px 0;
+        margin: 0;
+    }
+    main .rats .rat {
+        transform: none;
+        width: 100%;
+        margin-bottom: 20px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main .rats .rat .stars {
+        margin: 10px 20px 0;
+    }
+    main .rats .rat p {
+        margin: 10px;
+    }
+    main .feedbacks .feedback {
+        transform: none;
+    }
+}
